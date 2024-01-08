@@ -4,15 +4,8 @@
 #$1 - filepath - path to a file on file system
 #$2 - writestr - string to write in filepath
 
-#if either of arguments are invalid then script will exit with value 1
-#if both arguments are valid then script write writestr into filepath
-
-if [ $# -lt 2 ];then
-	echo $1 $2 $?
-	echo "insufficient number of arguments writer.sh"
-	exit 1
-fi
-
+#if filepath is emmpty then script will exit with value of 1
+#if filepath is valid then script write writestr into filepath
 if [ ! -f $1 ];then
 	if [ $1 = "" -o $1 = " " ]; then
 		echo $1" is empty filepath"
