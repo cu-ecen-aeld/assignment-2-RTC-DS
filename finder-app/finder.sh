@@ -8,7 +8,7 @@
 #if both arguments are valid then script will search for the searchstr within filesdir
 
 if [ $# -lt 2 ];then
-	echo "insufficient number of arguments"
+	echo "insufficient number of arguments for finder.sh"
 	exit 1
 fi
 
