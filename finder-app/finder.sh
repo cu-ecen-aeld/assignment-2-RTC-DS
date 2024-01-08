@@ -26,9 +26,8 @@ else
 fi
 
 #find all files under filesdir/* and input to search of searchstr
-#echo $filesdir "\n"$searchstr
 matchfiles="$(grep -r -l $searchstr "$filesdir")" #return only files with matches
-#echo $matchfiles
+
 filecount=0
 matchcount=0
 increment=1
@@ -37,10 +36,7 @@ for file in $matchfiles
 	filecount="$(($filecount+$increment))"
 	count="$(grep -c $searchstr "$file")"
 	matchcount="$(($matchcount+$count))"	
-	#echo "FILEEE"$filecount"\t"$matchcount
 	done
-#echo $filecount
-#echo $matchcount
 echo "The number of files are "$filecount" and the number of matching lines are "$matchcount
 exit 0
 
