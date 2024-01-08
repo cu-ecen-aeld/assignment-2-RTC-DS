@@ -8,7 +8,8 @@
 #if both arguments are valid then script write writestr into filepath
 
 if [ $# -lt 2 ];then
-	echo "insufficient number of arguments"
+	echo $1 $2 $?
+	echo "insufficient number of arguments writer.sh"
 	exit 1
 fi
 
